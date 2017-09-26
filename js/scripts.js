@@ -31,13 +31,13 @@ $(document).ready(function() {
     // alert(initialInput);
 
     var newAccount = new Account(nameInput, initialInput);
-    $("#output").text(newAccount.accountCurrent);
+    $("#output").text("$" + newAccount.accountCurrent);
     $("button#secondbutton").click(function() {
       var depositInput = parseFloat($("#deposit").val());
       var withdrawalInput = parseFloat($("#withdrawal").val());
       newAccount.add(depositInput);
       newAccount.subtract(withdrawalInput);
-      $("#output").text(newAccount.accountBalance);
+      $("#output").text("$" + newAccount.accountBalance);
 
     });
 

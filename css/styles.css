@@ -4,3 +4,14 @@
   text-align: center;
   margin: 0 auto;
 }
+
+.money {
+  text-align: right;
+}
+
+body {
+  background-image: url(../img/fievel.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
