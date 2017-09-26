@@ -32,6 +32,8 @@ $(document).ready(function() {
 
     var newAccount = new Account(nameInput, initialInput);
     $("#output").text("$" + newAccount.accountCurrent);
+    $("#output-box").show();
+
     $("button#secondbutton").click(function() {
       var depositInput = parseFloat($("#deposit").val());
       var withdrawalInput = parseFloat($("#withdrawal").val());

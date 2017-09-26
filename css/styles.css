@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+
 #output {
   border-style: inset;
   width: 300px;
   text-align: center;
   margin: 0 auto;
+}
+
+#output-box {
+  display: none;
 }
 
 .money {
@@ -14,10 +20,21 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  font-family: 'Gloria Hallelujah', cursive;
+
 }
 
 h1 {
   text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+
+}
+
+.jumbotron {
+  background-color: #ffb366;
+  color: green;
+
+
 }
 
 .panel-output {
