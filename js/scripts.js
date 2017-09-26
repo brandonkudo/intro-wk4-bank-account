@@ -4,11 +4,19 @@ function Account(name, initial) {
 }
 
 Account.prototype.add = function(addNumber) {
+  if (!addNumber) {
+    return 0;
+  } else {
   return this.accountCurrent + addNumber;
+  }
 }
 
 Account.prototype.subtract = function(subtractNumber) {
-  return subtractNumber;
+  if (!subtractNumber) {
+    return 0;
+  } else {
+    return subtractNumber;
+  }
 }
 
 $(document).ready(function() {
@@ -23,7 +31,7 @@ $(document).ready(function() {
     $("button#secondbutton").click(function() {
       var depositInput = parseFloat($("#deposit").val());
       var withdrawalInput = parseFloat($("#withdrawal").val())
-      $("#output").text(newAccount.add(depositInput));
+      $("#output").text(newAccount.add(depositInput) - newAccount.subtract(withdrawalInput));
 
     });
 
