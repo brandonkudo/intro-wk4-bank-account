@@ -1,21 +1,25 @@
 function Account(name, initial) {
   this.accountName = name;
   this.accountCurrent = initial;
+  this.accountBalance = initial;
 }
 
 Account.prototype.add = function(addNumber) {
+  debugger;
   if (!addNumber) {
-    return 0;
+    addNumber = 0;
+    this.accountBalance = this.accountBalance + addNumber;
   } else {
-  return this.accountCurrent + addNumber;
+    this.accountBalance = this.accountBalance + addNumber;
   }
 }
 
 Account.prototype.subtract = function(subtractNumber) {
   if (!subtractNumber) {
-    return 0;
+    subtractNumber = 0;
+    this.accountBalance = this.accountBalance - subtractNumber;
   } else {
-    return subtractNumber;
+    this.accountBalance = this.accountBalance - subtractNumber;
   }
 }
 
@@ -27,15 +31,16 @@ $(document).ready(function() {
     // alert(initialInput);
 
     var newAccount = new Account(nameInput, initialInput);
-
+    $("#output").text(newAccount.accountCurrent);
     $("button#secondbutton").click(function() {
       var depositInput = parseFloat($("#deposit").val());
-      var withdrawalInput = parseFloat($("#withdrawal").val())
-      $("#output").text(newAccount.add(depositInput) - newAccount.subtract(withdrawalInput));
+      var withdrawalInput = parseFloat($("#withdrawal").val());
+      newAccount.add(depositInput);
+      newAccount.subtract(withdrawalInput);
+      $("#output").text(newAccount.accountBalance);
 
     });
 
-    $("#output").text(newAccount.accountCurrent);
 
 
   });
