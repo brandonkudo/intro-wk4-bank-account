@@ -31,15 +31,15 @@ $(document).ready(function() {
     // alert(initialInput);
 
     var newAccount = new Account(nameInput, initialInput);
-    $("#output").text("$" + newAccount.accountCurrent);
-    $("#output-box").show();
+    $("#output").text("$" + newAccount.accountCurrent.toFixed(2));
+    $("#output-box, #formTwo-box").show();
 
     $("button#secondbutton").click(function() {
       var depositInput = parseFloat($("#deposit").val());
       var withdrawalInput = parseFloat($("#withdrawal").val());
       newAccount.add(depositInput);
       newAccount.subtract(withdrawalInput);
-      $("#output").text("$" + newAccount.accountBalance);
+      $("#output").text("$" + newAccount.accountBalance.toFixed(2));
 
     });
 

@@ -29,9 +29,12 @@
                   </div>
                   <div class="form-group">
                     <label>Enter your initial deposit amount:</label>
-                    <input type="number" id="initialdeposit" required class="form-control">
+                    <div class="input-group">
+                      <span class="input-group-addon">$</span>
+                      <input type="number" id="initialdeposit" required class="form-control">
+                    </div>
                   </div>
-                <button class="btn btn-primary" type="submit" id="firstbutton">Go West</button>
+                <button class="btn-lg btn-primary" type="submit" id="firstbutton"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span> Go West</button>
               </form>
           </div>
           </div>
@@ -39,7 +42,7 @@
 <!-- Deposit or withdraw fund panel group       -->
 
         <div class="col-md-6">
-          <div class="panel body-color">
+          <div class="panel body-color " id="formTwo-box">
             <div class="panel-heading panel-output">
               <label>Withdrawal / Deposit</label>
             </div>
@@ -47,13 +50,19 @@
               <form id="formTwo">
                   <div class="form-group">
                     <label>Deposit Amount:</label>
-                    <input type="number" id="deposit" class="form-control">
+                    <div class="input-group">
+                      <span class="input-group-addon">$</span>
+                      <input type="number" id="deposit" class="form-control">
+                    </div>
                   </div>
                   <div class="form-group">
                     <label>Withdrawal Amount:</label>
-                    <input type="number" id="withdrawal" class="form-control">
+                    <div class="input-group">
+                      <span class="input-group-addon">$</span>
+                      <input type="number" id="withdrawal" class="form-control">
+                    </div>
                   </div>
-                <button class="btn btn-success" type="button" id="secondbutton">Give 'em the laaazy eye!</button>
+                <button class="btn-success btn-lg" type="button" id="secondbutton"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Give 'em the laaazy eye! <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span></button>
               </form>
             </div>
           </div>
