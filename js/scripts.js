@@ -31,6 +31,7 @@ $(document).ready(function() {
     // alert(initialInput);
 
     var newAccount = new Account(nameInput, initialInput);
+    $(".balance-name").text(newAccount.accountName);
     $("#output").text("$" + newAccount.accountCurrent.toFixed(2));
     $("#output-box, #formTwo-box").show();
 

@@ -12,6 +12,9 @@
   display: none;
 }
 
+.balance-name {
+  font-size: 20px;
+}
 .money {
   text-align: right;
 }
