@@ -15,3 +15,20 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+
+h1 {
+  text-align: center;
+}
+
+.panel-output {
+  background-color: #804000;
+  color: white;
+}
+
+.body-color {
+border-color: #804000;
+}
+
+.panel {
+  opacity: .80;
+}
